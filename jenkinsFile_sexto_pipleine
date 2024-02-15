@@ -5,14 +5,14 @@ pipeline{
     string(name:"ID_JOB")
   }
   stages {
-    stage(´Hola Mundo´){
+    stage('Hola Mundo'){
     	steps {
      		 script {
         		sh "echo hola mundo"
       		}
     	}
   	}
-	stage(´Print params´) {
+	stage('Print params') {
 		steps {
 			script {
 				sh "echo ${PIPELINE_NAME}"
