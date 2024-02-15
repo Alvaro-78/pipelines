@@ -1,0 +1,23 @@
+pipeline{
+  agent any
+  parameters {
+    string(name:"PIPELINE_NAME")
+    string(name:"ID_JOB")
+  }
+  stages {
+    stage(´Hola Mundo´){
+    	steps {
+     		 script {
+        		sh "echo hola mundo"
+      		}
+    	}
+  	}
+	stage(´Print params´) {
+		steps {
+			script {
+				sh "echo ${PIPELINE_NAME}"
+				sh "echo ${ID_JOB}"
+			}
+		}
+	}
+}
